@@ -13,9 +13,9 @@ new WorkboxWebpackPlugin.InjectManifest({
 // TODO: Add CSS loaders and babel to webpack.
 new WebpackPwaManifest({
   filename: 'manifest.json',
-  name: 'My App',
-  short_name: 'App',
-  description: 'My Progressive Web App',
+  name: 'PWA-Text-Editor',
+  short_name: 'PWA-Text-Editor',
+  description: 'PWA-Text-Editor',
   background_color: '#ffffff',
   theme_color: '#000000',
   icons: [
