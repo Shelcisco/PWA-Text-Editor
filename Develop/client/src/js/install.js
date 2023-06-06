@@ -4,13 +4,13 @@ const butInstall = document.getElementById('buttonInstall');
 // TODO: Add an event handler to the `beforeinstallprompt` event
 window.addEventListener('beforeinstallprompt', (event) => {
     event.preventDefault();
-    const deferredPrompt = event;
+    window.deferredPrompt = event;
     butInstall.style.display = 'block';
 });
 
 // TODO: Implement a click event handler on the `butInstall` element
 butInstall.addEventListener('click', async () => {
-    deferredPrompt.prompt();
+    window.deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
     if (outcome === 'accepted') {
         console.log('User accepted the installation');
